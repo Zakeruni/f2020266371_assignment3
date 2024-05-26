@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Personalities</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .full-description {
+      display: none;
+    }
+    .read-more {
+      color: #6476df;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<header class="py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="#" class="text-dark font-weight-bold text-decoration-none">Personalities</a>
+    <nav class="nav">
+      <a class="nav-link text-dark" href="index.html">Home</a>
+      <a class="nav-link text-dark active" href="personalities.html">Favorite Personalities</a>
+      <a class="nav-link text-dark" href="cities.html">Favorite Cities</a>
+      <a class="nav-link text-dark" href="tourist_spots.html">Favorite Tourist Spots</a>
+      <a class="nav-link text-dark" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container mt-5">
+  <section class="row">
+    <h2 class="col display-4 text-center mb-4">My Favorite Personalities</h2>
+    <p class="col text-center lead">People who inspire me</p>
+  </section>
+
+  <section class="row mb-5 d-flex flex-wrap justify-content-center">
+    <div class="col-md-6 mb-4">
+      <div class="card shadow rounded border-0 overflow-hidden h-100">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PHm3bAhtNIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="card-body bg-light p-4">
+          <h5 class="card-title">Usman Riaz</h5>
+          <p class="card-text text-muted">
+            <b>Usman Riaz</b> <span class="full-description">Usman Riaz is a multi-talented artist known for his prowess in various creative domains, including music composition, film direction, animation, and painting. Under the banner of "Mano Productions," Riaz has carved a niche for himself as a visionary storyteller and a versatile musician. With a background deeply rooted in classical music and a penchant for experimentation, Usman Riaz infuses his creations with a unique blend of traditional and contemporary elements, resulting in captivating and thought-provoking works. Mano Productions serves as a platform for Riaz to explore his artistic vision across different mediums, from composing original soundtracks for films to crafting visually stunning animated narratives. Through his productions, Riaz aims to inspire audiences, provoke introspection, and push the boundaries of artistic expression. Whether through captivating melodies, visually arresting imagery, or engaging narratives, Usman Riaz and Mano Productions continue to leave an indelible mark on the world of art and entertainment, captivating audiences with their innovative and heartfelt creations.</span>
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card shadow rounded border-0 overflow-hidden h-100">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/C-nn1KNFX04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="card-body bg-light p-4">
+          <h5 class="card-title">Kim Jung Gi</h5>
+          <p class="card-text text-muted">
+            <b>Kim Jung Gi</b> <span class="full-description">Kim Jung Gi is a world-renowned South Korean artist celebrated for his extraordinary ability to create intricate and highly detailed drawings entirely from memory, without the aid of references or preliminary sketches. Born in 1975, Kim Jung Gi began drawing at a young age and honed his skills through years of practice and observation. His unique talent for visual memory allows him to produce elaborate illustrations that often depict complex scenes, including cityscapes, landscapes, animals, and characters, with astonishing accuracy and precision. Kim Jung Gi's drawings are characterized by their dynamic composition, meticulous attention to detail, and seamless execution. Beyond his impressive artistic abilities, Kim Jung Gi has gained international acclaim through his live drawing performances, where he creates stunning artworks in real-time, captivating audiences with his mesmerizing technique and speed.</span>
+          </p>
+          <a href="#" class="btn btn-sm btn-outline-primary read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-white py-4 d-flex justify-content-center">
+  <div class="container">
+    <a href="https://www.facebook.com/abdullah.nisar.44/" target="_blank" class="text-white mx-2">
+        <i class="fab fa-facebook"></i> </a>
+      <a href="https://www.instagram.com/_artistic_craze/" target="_blank" class="text-white mx-2">
+        <i class="fab fa-instagram"></i> </a>
+      <a href="https://www.youtube.com/channel/UC19mbuSnuRVP5k5aT0f8b6g" target="_blank" class="text-white mx-2">
+        <i class="fab fa-youtube"></i> </a>
+    </a>
+  </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const readMoreButtons = document.querySelectorAll(".read-more");
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+        event.preventDefault();
+        const fullDescription = event.target.previousElementSibling.querySelector(".full-description");
+        fullDescription.style.display = fullDescription.style.display === "none" ? "block" : "none";
+        });
+    });
+    });
+</script>
+</body>
+</html>
